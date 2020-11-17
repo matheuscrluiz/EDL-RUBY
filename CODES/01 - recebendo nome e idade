@@ -1,0 +1,17 @@
+/* Comentarios
+
+=begin
+Criar uma variável com seu nome, uma variável com sua idade. Imprimir o resultado em uma frase: 
+=end
+
+*/
+
+print ("Digite seu nome: ")
+nome = gets.chomp /* chomo é usado quando o enter for pressionado ele não crie uma quebra de linha */
+puts "\n"
+print ("Digite sua idade: ")
+
+idade = gets.to_i /* Recebe um inteiro do teclado */
+
+
+puts "Meu nome é #{nome} e tenho #{idade} anos."
