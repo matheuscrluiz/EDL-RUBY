@@ -1,0 +1,34 @@
+/*
+Jogo da adivinhação da senha: Crie uma variável (vai ser a senha secreta) com um número inteiro a ser adivinhado pelo usuário. 
+Peça ao usuário para adivinhar o número. Se ele acertar, imprima que ele acertou. Se ele errar, 
+diga se o palpite foi maior ou menor que o número secreto e pergunte novamente. 
+Continue perguntando ao usuário até o valor digitado for igual a sua senha secreta.
+*/
+
+print("Digite a senha para ser acertada: ")
+senha_secreta = gets.to_i                       /* Recebe valor digitado pelo teclado */
+
+print("Digite a senha para tentar acertar: ")
+senha_digitada = gets.to_i                      /* Recebe valor digitado pelo teclado */
+
+while senha_secreta != senha_digitada
+  
+
+  if senha_digitada > senha_secreta
+  
+    puts "A senha secreta é menor que a senha digitada!"
+    puts "Digite novamente:"
+    senha_digitada = gets.to_i                  /* Recebe valor digitado pelo teclado */
+    
+  elsif senha_digitada < senha_secreta
+    puts "A senha secreta é maior que a senha digitada!"
+    puts "Digite novamente:"
+    senha_digitada = gets.to_i
+    
+  end                                            /* Termina a condição */
+  
+  if senha_secreta == senha_digitada 
+    puts ("Acertou a senha. #{senha_digitada}")
+    break
+  end                                            /* Termina a condição */
+end                                             /* Termina o laço de repetição While
