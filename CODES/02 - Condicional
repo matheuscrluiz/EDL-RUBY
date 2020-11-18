@@ -1,0 +1,21 @@
+=begin
+    
+Se a variável peso é maior ou igual à 70: imprimir o texto “Está acima do peso.” 
+Se a variável peso for menor ou igual que 40, imprimir “Está abaixo do peso” 
+Se a variável estiver entre 40~70, imprimir “Está no peso ideal”
+
+=end
+
+print ("Digite um peso para medição: ")  /* Mostra frase na tela */
+
+peso = gets.to_f /*Recebe um valor float do teclado */
+
+if peso >= 70
+    puts ("Está acima do peso!")
+elsif peso <= 40
+    puts ("Está abaixo do peso!")
+
+end     /* Encerra as condições */
+if peso > 40 and peso < 70
+    puts ("Está no peso ideal!")
+end
