@@ -1,0 +1,17 @@
+def fatorial(n)
+    if(n > 1)
+        return n * fatorial(n-1)
+    else
+        return 1
+    end
+end
+ 
+# Lê um valor e converte em um número inteiro
+puts "Digite um numero: "
+n = gets.to_i()
+ 
+# Calcula o fatorial
+fat = fatorial(n)
+ 
+#Converte os números em texto e imprime o fatorial do número    
+puts "Fatorial de " + n.to_s + ": " + fat.to_s
