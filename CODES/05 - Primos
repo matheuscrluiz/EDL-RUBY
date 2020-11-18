@@ -1,0 +1,26 @@
+
+primeiro= 0
+ultimo = 0
+
+
+puts 'Informe o valor inicial para contagem de primos: '
+primeiro = gets.chomp.to_i                                    /*Recebe valor do teclado */
+
+puts 'Informe o valor final da contagem de primos: '
+ultimo = gets.chomp.to_i                                      /*Recebe valor do teclado */
+
+puts
+puts 'Numeros Primos de ' + primeiro.to_s + ' a ' + ultimo.to_s + ':'                 /* Mostra na tela numero primos de primeiro valor escolhido ao ultimo valor escolhido */
+puts
+
+for i in primeiro..ultimo do
+	k = 0                                             /* variavel k é pra saber quantas divisoes dão resto igual a 0 */
+	for j in 2..i
+		if i % j == 0 then
+			k = k + 1
+		end
+	end
+	if k == 1 then                                
+		puts i
+	end
+end
