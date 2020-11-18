@@ -1,0 +1,23 @@
+=begin
+ 
+Considerando o código abaixo:
+
+senha = "A4B5"
+Escreva um código que pergunte a senha para o usuário. Enquanto a senha digitada não for igual a senha acima
+continue perguntando a senha. Quando o usuário descobrir a senha, imprima Senha descoberta!.
+
+=end
+
+senha = "A4B5"
+
+print ("Digite sua senha para confirmação: ")
+senha_digitada  = gets.chomp                   /* Recebe string */
+
+while senha != senha_digitada
+    
+    puts ("Senha incorreta! ")
+    puts ("Digite sua senha novamente: ")
+    senha_digitada = gets.chomp
+end                                           /* Encerra loop */
+
+puts ("Senha correta! ")
