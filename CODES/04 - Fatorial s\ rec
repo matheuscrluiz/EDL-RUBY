@@ -1,0 +1,10 @@
+
+puts "Digite um numero para o fatorial: "
+numero = gets.to_i
+ 
+fatorial = 1
+for i in fatorial..numero             /* faz um for do fatorial (1) ate o numero digitado */
+    fatorial = fatorial * i         
+end
+ 
+puts "Fatorial de " + numero.to_s + ": " + fatorial.to_s
