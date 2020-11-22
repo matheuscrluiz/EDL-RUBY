@@ -2,10 +2,10 @@ output1 = "Escolha <1>QUADRADO ou <2>CIRCULO"
 output2 = 'Qual o valor do lado ou do raio?'
  
 def area(par1, par2)
-    if par1 == 1
+    if par1 == 1 /*se for 1, irá calcular a area do quadrado, pegando o valor do output2 */
         par2 * par2
     else
-        if par1 == 2
+        if par1 == 2     /* se for 2, ira calcular do circulo, pegando o valor do output2 e multiplicando pelo raio */
             par2 * par2 * 3.14159
         end
     end 
@@ -15,10 +15,10 @@ puts 'CALCULAR AREA'
  
 puts output1
 STDOUT.flush
-arg1 = gets.chomp.to_i
+arg1 = gets.chomp.to_i         /* pega os valores digitados pelo teclado  */
  
 puts output2
 STDOUT.flush
-arg2 = gets.chomp.to_i
+arg2 = gets.chomp.to_i      /* pega os valores digitados pelo teclado */
  
 puts("\nArea = " + area(arg1, arg2).to_s)
