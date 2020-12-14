@@ -1,0 +1,108 @@
+module Funcionario
+    def id
+        @id
+    end
+
+    def id=(str)
+        @id = str
+    end
+
+    def cargo
+        @cargo
+    end
+
+    def cargo=(str2)
+        @cargo = str2
+        
+    end
+    
+    def investmento_minimo 
+        @investmento_minimo
+    end
+
+    def investmento_minimo=(str5)
+        @investmento_minimo = str5
+    end
+
+end
+
+module Investidor
+    def empresa
+        @empresa
+    end
+
+    def empresa=(str3)
+        @empresa = str3
+    end
+
+    def quant_invest
+        @quant_invest
+    end
+
+    def quant_invest=(str4)
+        @quant_invest= str4
+        
+    end
+
+end
+
+
+class Pessoa
+    include Funcionario
+    include Investidor
+    def funcao
+        id
+        cargo
+        investmento_minimo
+        
+    end
+    def invst
+        empresa
+        quant_invest
+    end
+
+    def comparavalor
+        investmento_minimo
+        quant_invest
+    end   
+end
+
+
+p = Pessoa.new
+puts ("------------ INFORMAÇÕES DO FUNCIONÁRIO ------------")
+puts
+print("Digite seu ID: ")
+p.id = gets.to_i
+print("Digite seu cargo: ")
+p.cargo = gets.to_i
+print("Digite o investimento minimo aceito: ")
+p.investmento_minimo = gets.to_f
+
+puts
+puts ("------------ INFORMAÇÕES DO INVESTIDOR ------------")
+puts
+print("Digite o nome da empresa que está representando: ")
+p.empresa = gets.chomp
+print("Digite o valor a investir: ")
+p.quant_invest = gets.to_f
+
+if  p.investmento_minimo    >  p.quant_invest
+    maior =  p.investmento_minimo
+
+end
+
+puts
+puts("ID: "+p.id.to_s)
+puts ("Seu cargo é: "+p.cargo.to_s) 
+puts ("O invesmento minimo aceito pela empresa é de: "+p.investmento_minimo.to_s)
+puts ("------------------------------------------------")
+puts
+puts("Nome da empresa: "+p.empresa.to_s)
+puts ("Dinheiro investido: "+p.quant_invest.to_s) 
+puts ("------------------------------------------------")
+
+if(maior ==  p.investmento_minimo   )
+    puts ("O valor oferecido é menor que o minimo desejado")
+else
+    puts ("O valor oferecido é suficiente.")
+end
